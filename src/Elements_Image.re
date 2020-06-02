@@ -1,6 +1,6 @@
-//open ReactNative;
-//
-//type imageProps;
+open ReactNative;
+
+type imageProps;
 //
 //[@bs.obj]
 //external fromImageProps:
