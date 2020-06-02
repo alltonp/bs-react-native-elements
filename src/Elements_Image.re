@@ -1,4 +1,4 @@
-open ReactNative;
+//open ReactNative;
 
 type imageProps;
 //
