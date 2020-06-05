@@ -4,6 +4,7 @@ open Core;
 [@bs.deriving abstract]
 type jsProps = {
   .
+  "key": Js.nullable(string),
   "containerStyle": Js.nullable(Style.t),
   "contentContainerStyle": Js.nullable(Style.t),
   "rightContentContainerStyle": Js.nullable(Style.t),
@@ -38,6 +39,7 @@ type jsProps = {
 let makeProps =
     /* ~_Component: option(React.element)=?, */
     (
+      ~key: option(string)=?,
       ~containerStyle: option(Style.t)=?,
       ~contentContainerStyle: option(Style.t)=?,
       ~rightContentContainerStyle: option(Style.t)=?,
@@ -76,6 +78,7 @@ let makeProps =
       /* ~pad: int=?, */
       (),
     ) => {
+  "key": Js.Nullable.fromOption(key),
   "containerStyle": Js.Nullable.fromOption(containerStyle),
   "contentContainerStyle": Js.Nullable.fromOption(contentContainerStyle),
   "rightContentContainerStyle":
