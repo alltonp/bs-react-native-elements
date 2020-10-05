@@ -16,6 +16,7 @@ type jsProps = {
   "titleStyle": Js.nullable(Style.t),
   "subtitle": jsUnsafe,
   "subtitleStyle": Js.nullable(Style.t),
+  "rightTitleStyle": Js.nullable(Style.t),
   "rightTitle": jsUnsafe,
   "rightSubtitle": jsUnsafe,
   "leftIcon": jsUnsafe,
@@ -54,7 +55,7 @@ let makeProps =
       ~subtitleStyle: option(Style.t)=?,
       /* ~subtitleProps, */
       ~rightTitle: option(StrOrNode.t)=?,
-      /* ~rightTitleStyle: Style.t=?, */
+      ~rightTitleStyle: option(Style.t)=?,
       /* ~rightTitleProps, */
       ~rightSubtitle: option(StrOrNode.t)=?,
       /* ~rightSubtitleStyle: Style.t=?, */
@@ -91,6 +92,7 @@ let makeProps =
   "titleStyle": Js.Nullable.fromOption(titleStyle),
   "subtitle": subtitle |> StrOrNode.encodeValue,
   "subtitleStyle": Js.Nullable.fromOption(subtitleStyle),
+  "rightTitleStyle": Js.Nullable.fromOption(rightTitleStyle),
   "rightTitle": rightTitle |> StrOrNode.encodeValue,
   "rightSubtitle": rightSubtitle |> StrOrNode.encodeValue,
   "leftIcon": leftIcon |> StrOrNode.encodeValue,
