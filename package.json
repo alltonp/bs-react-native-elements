@@ -17,7 +17,7 @@
   },
   "peerDependencies": {
     "react-native": "^0.60.0",
-    "react-native-elements": "^1.2.1",
+    "react-native-elements": "^2.3.2",
     "reason-react": "^0.7.0",
     "reason-react-native": "^0.60.0"
   },
