@@ -4,8 +4,7 @@ type case =
   | Number(int)
   | String(string);
 
-[@react.component]
-[@bs.module "react-native-elements"]
+[@react.component] [@bs.module "react-native-elements"]
 external make:
   (
     ~borderRadius: int=?,
@@ -24,12 +23,12 @@ external make:
     ~animationType: [@bs.string] [ | `none | `slide | `fade]=?,
     ~hardwareAccelerated: bool=?,
     ~onDismiss: unit => unit=?,
-    ~onOrientationChange: Event.syntheticEvent({
-                            .
-                            "orientation": Modal.OrientationChange.t,
-                          }) =>
-                          unit
-                            =?,
+    //    ~onOrientationChange: Event.syntheticEvent({
+    //                            .
+    //                            "orientation": Modal.OrientationChange.t,
+    //                          }) =>
+    //                          unit
+    //                            =?,
     ~onRequestClose: unit => unit=?,
     ~onShow: unit => unit=?,
     ~presentationStyle: [@bs.string] [
@@ -43,5 +42,5 @@ external make:
     ~transparent: bool=?,
     unit
   ) =>
-  React.element = 
+  React.element =
   "Overlay";
