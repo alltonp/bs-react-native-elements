@@ -20,7 +20,7 @@ external make:
     ~windowBackgroundColor: Color.t=?,
     // ============== modal props
     ~ref: ReactNative.NativeElement.ref=?,
-    ~animationType: [@bs.string] [ | `none | `slide | `fade]=?,
+    ~animationType: [ | `none | `slide | `fade]=?,
     ~hardwareAccelerated: bool=?,
     ~onDismiss: unit => unit=?,
     //    ~onOrientationChange: Event.syntheticEvent({
@@ -31,7 +31,7 @@ external make:
     //                            =?,
     ~onRequestClose: unit => unit=?,
     ~onShow: unit => unit=?,
-    ~presentationStyle: [@bs.string] [
+    ~presentationStyle: [
                           | `fullScreen
                           | `pageSheet
                           | `formSheet
